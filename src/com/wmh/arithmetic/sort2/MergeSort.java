@@ -11,6 +11,7 @@ public class MergeSort {
     margeSort(array, 0, array.length - 1);
   }
 
+  // 归
   public void margeSort(int[] array, int start, int end) {
     if (end <= start) return;
     int se = start + (end - start) / 2;
@@ -20,9 +21,10 @@ public class MergeSort {
     marge(array, start, se, es, end);
   }
 
+  // 并
   public void marge(int[] array, int s, int se, int es, int e) {
     // 比较元素拷贝
-    int[] temp = new int[e - s];
+    int[] temp = new int[e - s + 1];
     int i = 0, j = s, k = es;
     while (j <= se && k <= e) {
       if (array[j] < array[k]) {
@@ -34,7 +36,7 @@ public class MergeSort {
 
     // 剩余元素拷贝
     int start = j, end = se;
-    if (j < k) {
+    if (k <= e) {
       start = k;
       end = e;
     }
