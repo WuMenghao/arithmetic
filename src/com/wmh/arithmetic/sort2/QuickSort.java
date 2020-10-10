@@ -8,10 +8,11 @@ public class QuickSort {
     if (array.length <= 1) {
       return;
     }
-    quickSort(array, 0, array.length - 1);
+    partition(array, 0, array.length - 1);
   }
 
-  private void quickSort(int[] array, int start, int end) {
+  // 分区
+  private void partition(int[] array, int start, int end) {
     if (start >= end) return;
     int pivot = array[end];
     // (1)通过j,i进行值交换，保证小的值都在大值的前面
@@ -25,8 +26,8 @@ public class QuickSort {
     }
     // (2)最终交换j与pivot的值
     swap(array, j, end);
-    quickSort(array, start, j - 1);
-    quickSort(array, j + 1, end);
+    partition(array, start, j - 1);
+    partition(array, j + 1, end);
   }
 
   private void swap(int[] array, int idx1, int idx2) {
