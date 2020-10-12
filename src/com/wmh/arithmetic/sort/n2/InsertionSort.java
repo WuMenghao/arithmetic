@@ -1,6 +1,6 @@
-package com.wmh.arithmetic.sort;
+package com.wmh.arithmetic.sort.n2;
 
-public class BubbleSort {
+public class InsertionSort {
 
   public void sort(int[] array) {
     if (array == null) {
@@ -11,20 +11,23 @@ public class BubbleSort {
     }
     int temp;
     for (int i = 1; i < array.length; i++) {
-      for (int j = 0; j < array.length - i; j++) {
-        if (array[j + 1] < array[j]) {
-          temp = array[j];
-          array[j] = array[j + 1];
-          array[j + 1] = temp;
+      temp = array[i];
+      int j = i - 1;
+      for (; j >= 0; j--) {
+        if (temp < array[j]) {
+          array[j + 1] = array[j]; // 移动数据
+        } else {
+          break;
         }
       }
+      array[j + 1] = temp; // 插入
     }
   }
 
   public static void main(String[] args) {
     int[] array = {4, 5, 6, 1, 2, 3};
-    BubbleSort bubbleSort = new BubbleSort();
-    bubbleSort.sort(array);
+    InsertionSort insertionSort = new InsertionSort();
+    insertionSort.sort(array);
 
     for (int one : array) {
       System.out.print(one + "\t");

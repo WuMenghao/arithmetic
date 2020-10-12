@@ -1,4 +1,4 @@
-package com.wmh.arithmetic.sort;
+package com.wmh.arithmetic.sort.n2;
 
 public class SelectionSort {
 

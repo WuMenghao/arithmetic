@@ -1,4 +1,4 @@
-package com.wmh.arithmetic.sort2;
+package com.wmh.arithmetic.sort.nlogn;
 
 public class MergeSort {
   public void sort(int[] array) {

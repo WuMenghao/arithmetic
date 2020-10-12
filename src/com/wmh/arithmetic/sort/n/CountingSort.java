@@ -1,4 +1,4 @@
-package com.wmh.arithmetic.sort3;
+package com.wmh.arithmetic.sort.n;
 
 import com.wmh.arithmetic.RandomUtil;
 
