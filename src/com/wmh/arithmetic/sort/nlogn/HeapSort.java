@@ -15,8 +15,10 @@ public class HeapSort {
     // 排序
     int k = array.length - 1;
     while (k > 0) {
+      // 交换堆顶和最后一个元素
       swap(array, 0, k);
       k--;
+      // 再次堆化
       heapify(array, k, 0);
     }
   }
