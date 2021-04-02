@@ -20,7 +20,13 @@ public class Graph {
     adj[target].add(source);
   }
 
-  // BFS search
+  /**
+   * BFS search
+   *
+   * @param s
+   * @param t
+   * @return
+   */
   public int bfs(int s, int t) {
     if (s == t) return s;
     // 已被访问过的节点
@@ -58,6 +64,13 @@ public class Graph {
     return 0;
   }
 
+  /**
+   * DFS Search
+   *
+   * @param s
+   * @param t
+   * @return
+   */
   public int dfs(int s, int t) {
     // 已被访问过的节点
     boolean[] visited = new boolean[v];
