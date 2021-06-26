@@ -63,6 +63,24 @@ public class BoyerMoore {
     }
   }
 
+  // 构建好后缀索引表 与 最长好后缀前缀字串
+  private void ganarateGS(char[] b, int m, int[] suffix, boolean[] prefix) {
+    // 初始化好后缀 和 最长好后缀前缀
+    for (int i = 0; i < m; i++) {
+      suffix[i] = -1;
+      prefix[i] = false;
+    }
+    for (int i = 0; i < m; i++) {
+      int j = i;
+      int k = 0; // 该伦后缀字串长度
+      while (j >= 0 && b[j] == b[m - 1 - k]) {
+        --j;
+        ++k;
+        suffix[k] = j + 1;
+      }
+    }
+  }
+
   public static void main(String[] args) {
     String main = "255378";
     String pattern = "37";
