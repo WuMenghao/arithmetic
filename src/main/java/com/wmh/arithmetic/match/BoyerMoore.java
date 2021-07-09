@@ -146,7 +146,7 @@ public class BoyerMoore {
             + "an alertmanager to handle alerts\n"
             + "various support tools\n"
             + "Most Prometheus components are written in Go, making them easy to build and deploy as static binaries.";
-    String pattern = "dashboarding";
+    String pattern = "making them easy to build and deploy as static binaries";
     int index = BoyerMoore.BMMatch(main, pattern);
     long end = System.nanoTime();
     System.out.println(index);
