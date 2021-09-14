@@ -37,9 +37,9 @@ public class Queen8 {
     for (int row = 0; row < 8; row++) {
       for (int colum = 0; colum < 8; colum++) {
         if (resutl[row] == colum) {
-          System.out.print("Q");
+          System.out.print("Q  ");
         } else {
-          System.out.print("*");
+          System.out.print("*  ");
         }
       }
       System.out.println();
